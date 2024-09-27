@@ -12,22 +12,21 @@ public class MyArrays{
     int[] test2 = {};
 
     int[] test_result = returnCopy(test);
-    System.out.println(test_result != test);
-    for(int i = 0; i < test.length; i++){
-      System.out.println("Original Value: " + test[i] + " Copied Value: " + test_result[i]);
-    }
+    System.out.println("Addresses are different: " + test_result != test);
+    System.out.println("Values are the same: " + arrayToString(test).equals(arrayToString(test_result)));
     
     int[] test1_result = returnCopy(test1);
-    System.out.println(test1_result != test1);
-    for(int i = 0; i < test1.length; i++){
-      System.out.println("Original Value: " + test1[i] + " Copied Value: " + test1_result[i]);
-    }
+    System.out.println("Addresses are different: " + test1_result != test1);
+    System.out.println("Values are the same: " +arrayToString(test1).equals(arrayToString(test1_result)));
 
     int[] test2_result = returnCopy(test2);
-    System.out.println(test2_result != test2);
-    for(int i = 0; i < test2.length; i++){
-      System.out.println("Original Value: " + test2[i] + " Copied Value: " + test2_result[i]);
-    }
+    System.out.println("Addresses are different: " + test2_result != test2);
+    System.out.println("Values are the same: " + arrayToString(test2).equals(arrayToString(test2_result)));
+
+    //test cases for concatArray
+    //int[] arr1 = 
+    //System.out.println("Expected Value [1, 3, 4, 5, 6, 7, 8, 9], Actual Values: ")
+    //for(int i = 0; i < )
 
   }
 
