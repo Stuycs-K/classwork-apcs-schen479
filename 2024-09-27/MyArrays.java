@@ -2,9 +2,11 @@ public class MyArrays{
 
   public static void main(String[] args){
 
+    //test cases for arrayToString
     System.out.println(arrayToString(new int[]{1, 2, 3}));
     System.out.println(arrayToString(new int[]{1}));
 
+    //test cases for returnCopy
     int[] test = {1, 2, 3, 4};
     int[] test1 = {1};
     int[] test2 = {};
@@ -26,7 +28,11 @@ public class MyArrays{
   }
 
   public static int[] returnCopy(int[] ary){
-    return new int[0];
+    int[] newAry = new int[ary.length];
+    for (int i = 0; i < ary.length; i++){
+      newAry[i] = ary[i];
+    }
+    return newAry;
   }
 
   public static int[] concatArray(int[] ary1,int[] ary2){
