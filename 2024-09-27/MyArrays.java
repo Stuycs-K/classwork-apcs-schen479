@@ -10,9 +10,24 @@ public class MyArrays{
     int[] test = {1, 2, 3, 4};
     int[] test1 = {1};
     int[] test2 = {};
-    System.out.println(returnCopy(test) != test);
-    System.out.println(returnCopy(test1) != test1);
-    System.out.println(returnCopy(test2) != test2);
+
+    int[] test_result = returnCopy(test);
+    System.out.println(test_result != test);
+    for(int i = 0; i < test.length; i++){
+      System.out.println("Original Value: " + test[i] + " Copied Value: " + test_result[i]);
+    }
+    
+    int[] test1_result = returnCopy(test1);
+    System.out.println(test1_result != test1);
+    for(int i = 0; i < test1.length; i++){
+      System.out.println("Original Value: " + test1[i] + " Copied Value: " + test1_result[i]);
+    }
+
+    int[] test2_result = returnCopy(test2);
+    System.out.println(test2_result != test2);
+    for(int i = 0; i < test2.length; i++){
+      System.out.println("Original Value: " + test2[i] + " Copied Value: " + test2_result[i]);
+    }
 
   }
 
