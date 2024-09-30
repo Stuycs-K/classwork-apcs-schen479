@@ -7,7 +7,7 @@ public class MyArrays{
     System.out.println(arrayToString(new int[]{1}));
 
     //test cases for returnCopy
-    int[] test = {1, 2, 3, 4};
+    int[] test = {1, 2, 3, -4};
     int[] test1 = {3, 4, 5};
     int[] test2 = {6};
     int[] test3 = {};
@@ -33,6 +33,9 @@ public class MyArrays{
     System.out.println("Original Arrays : " + arrayToString(test) + " " + arrayToString(test2) + " Concatenated Values: " + arrayToString(concatArray(test, test2)));
     System.out.println("Original Arrays : " + arrayToString(test) + " " + arrayToString(test3) + " Concatenated Values: " + arrayToString(concatArray(test, test3)));
     System.out.println("Original Arrays : " + arrayToString(test3) + " " + arrayToString(test) + " Concatenated Values: " + arrayToString(concatArray(test3, test)));
+    System.out.println("Original Arrays : " + arrayToString(test2) + " " + arrayToString(test) + " Concatenated Values: " + arrayToString(concatArray(test2, test)));
+    System.out.println("Original Arrays : " + arrayToString(test1) + " " + arrayToString(test) + " Concatenated Values: " + arrayToString(concatArray(test1, test)));
+
 
 
 
