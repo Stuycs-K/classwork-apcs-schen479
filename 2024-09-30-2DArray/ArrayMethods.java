@@ -27,8 +27,34 @@ public class ArrayMethods{
     System.out.println("Expected: [[1], [2], [3]] Got: " + arrToString(swapRC(new int[][]{{1, 2, 3}})));
 
     System.out.println("replaceNegative");
-    System.out.println();
+    int[][] test1 = {};
+    int[][] test2 = {{}};
+    int[][] test3 = {{-1, -2, -3}};
+    int[][] test4 = {{4, 5, -6}, {7, -8, -9}};
+    int[][] test5 = {{-4, 5, -2}, {7, -5, -1}, {8, 9, -10}};
+    int[][] test6 = {{-4, 5}, {7}, {8, 9, -10}};
+
+    System.out.println("Test 1 Before: " + arrToString(test1));
+    replaceNegative(test1);
+    System.out.println("Test 1 After: " + arrToString(test1));
+    System.out.println("Test 2 Before: " + arrToString(test2));
+    replaceNegative(test2);
+    System.out.println("Test 2 After: " + arrToString(test2));
+    System.out.println("Test 3 Before: " + arrToString(test3));
+    replaceNegative(test3);
+    System.out.println("Test 3 After: " + arrToString(test3));
+    System.out.println("Test 4 Before: " + arrToString(test4));
+    replaceNegative(test4);
+    System.out.println("Test 4 After: " + arrToString(test4));
+    System.out.println("Test 5 Before: " + arrToString(test5));
+    replaceNegative(test5);
+    System.out.println("Test 5 After: " + arrToString(test5));
+    System.out.println("Test 6 Before: " + arrToString(test6));
+    replaceNegative(test6);
+    System.out.println("Test 6 After: " + arrToString(test6));
+   
   }
+  
 
   public static String arrToString(int[] nums){
     String result = "[";
