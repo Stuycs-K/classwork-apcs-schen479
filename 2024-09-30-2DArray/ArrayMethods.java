@@ -53,6 +53,37 @@ public class ArrayMethods{
     replaceNegative(test6);
     System.out.println("Test 6 After: " + arrToString(test6));
    
+    System.out.println("copy");
+    int[][] test7 = {};
+    int[][] test8 = {{}};
+    int[][] test9 = {{1, 3}};
+    int[][] test10 = {{1, 3, 4}, {2, 5, 6}};
+    int[][] test11 = {{1, 3, 4}, {2, 5, 6}, {9, 10, 11}};
+    int[][] test12 = {{1, 3}, {2}, {5, 6, 7}};
+
+    int[][] test7_result = copy(test7);
+    System.out.println("Addresses are different: " + (test7_result != test7));
+    System.out.println("Original Values: " + arrToString(test7) + " Copied Values: " + (arrToString(test7_result)));
+    
+    int[][] test8_result = copy(test8);
+    System.out.println("Addresses are different: " + (test8_result != test8));
+    System.out.println("Original Values: " + arrToString(test8) + " Copied Values: " + arrToString(test8_result));
+
+    int[][] test9_result = copy(test9);
+    System.out.println("Addresses are different: " + (test9_result != test9));
+    System.out.println("Original Values: " + arrToString(test9) + " Copied Values: " + arrToString(test9_result));
+
+    int[][] test10_result = copy(test10);
+    System.out.println("Addresses are different: " + (test10_result != test10));
+    System.out.println("Original Values: " + arrToString(test10) + " Copied Values: " + arrToString(test10_result));
+      
+    int[][] test11_result = copy(test11);
+    System.out.println("Addresses are different: " + (test11_result != test11));
+    System.out.println("Original Values: " + arrToString(test11) + " Copied Values: " + arrToString(test11_result));
+
+    int[][] test12_result = copy(test12);
+    System.out.println("Addresses are different: " + (test12_result != test12));
+    System.out.println("Original Values: " + arrToString(test12) + " Copied Values: " + arrToString(test12_result));
   }
   
 
@@ -104,13 +135,6 @@ public class ArrayMethods{
     return newNums;
   }
 
-
-
-  //3. Modify a given 2D array of integer as follows:
-  //Replace all the negative values:
-  //-When the row number is the same as the column number replace
-  //that negative with the value 1
-  //-All other negatives replace with 0
   public static void replaceNegative(int[][] vals){
     for (int i = 0; i < vals.length; i++){
       for (int j = 0; j < vals[i].length; j++){
@@ -132,6 +156,20 @@ public class ArrayMethods{
   //You SHOULD write a helper method for this.
   //If you don't see a good way to do that, you should stop and look at prior methods.
   public static int[][] copy(int[][] nums){
-    return null;//placeholder so it compiles
+    int[][] newNums = new int[nums.length][];
+
+    for(int i = 0; i < newNums.length; i++){
+      newNums[i] = returnCopy(nums[i]);
+    }
+    return newNums;
   }
+
+  public static int[] returnCopy(int[] ary){
+    int[] newAry = new int[ary.length];
+    for (int i = 0; i < ary.length; i++){
+      newAry[i] = ary[i];
+    }
+    return newAry;
+  }
+
 }
