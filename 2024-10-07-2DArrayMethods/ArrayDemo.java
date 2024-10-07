@@ -6,15 +6,15 @@ public class ArrayDemo{
     int[] test2 = new int[]{};
     int[] test3 = new int[]{2};
 
-    String test1_result = Arrays.arrToString(test1);
-    String test2_result =Arrays.arrToString(test2);
-    String test3_result = Arrays.arrToString(test3);
+    String test1_result = Arrays.toString(test1);
+    String test2_result = Arrays.toString(test2);
+    String test3_result = Arrays.toString(test3);
 
 
     System.out.println("arrToString");
     System.out.println("Array method: " + test1_result + " My method: " + arrToString(new int[]{1, 2, 4}));
-    System.out.println("Array method: " + test1_result + " My method: " + arrToString(new int[]{}));
-    System.out.println("Array method: " + Arrays.arrToString(new int[]{2}) + " My method: " + arrToString(new int[]{2}));
+    System.out.println("Array method: " + test2_result + " My method: " + arrToString(new int[]{}));
+    System.out.println("Array method: " + test3_result + " My method: " + arrToString(new int[]{2}));
 
   }
 
