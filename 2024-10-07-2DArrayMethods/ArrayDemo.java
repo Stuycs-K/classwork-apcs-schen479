@@ -2,15 +2,19 @@ import java.util.Arrays;
 
 public class ArrayDemo{
   public static void main(String[] args){
+    int[] test1 = new int[]{1, 2, 4};
+    int[] test2 = new int[]{};
+    int[] test3 = new int[]{2};
+
+    String test1_result = Arrays.arrToString(test1);
+    String test2_result =Arrays.arrToString(test2);
+    String test3_result = Arrays.arrToString(test3);
+
+
     System.out.println("arrToString");
-    System.out.println("Array method: " + Arrays.arrToString(new int[]{1, 2, 4}) + " My method: " + arrToString(new int[]{1, 2, 4}));
-    System.out.println("Array method: " + Arrays.arrToString(new int[]{}) + " My method: " + arrToString(new int[]{}));
+    System.out.println("Array method: " + test1_result + " My method: " + arrToString(new int[]{1, 2, 4}));
+    System.out.println("Array method: " + test1_result + " My method: " + arrToString(new int[]{}));
     System.out.println("Array method: " + Arrays.arrToString(new int[]{2}) + " My method: " + arrToString(new int[]{2}));
-    System.out.println("Array method: " + Arrays.arrToString(new int[][]{{2, 4, 5}, {3, 5, 6}}) + " My method: " + arrToString(new int[][]{{2, 4, 5}, {3, 5, 6}}));
-    System.out.println("Array method: " + Arrays.arrToString(new int[][]{{2, 4, 5}, {6, 7}, {9, 0, 12, 23}}) + " My method: " + arrToString(new int[][]{{2, 4, 5}, {6, 7}, {9, 0, 12, 23}}));
-    System.out.println("Array method: " + Arrays.arrToString(new int[][]{{}}) + " My method: " + arrToString(new int[][]{{}}));
-
-
 
   }
 
@@ -46,7 +50,15 @@ public class ArrayDemo{
 
   //1. Calculate and return how many elements equal zero in the 2D array.
   public static int countZeros2D(int[][] nums){
-    return 0;
+    int count = 0;
+    for (int i = 0; i < nums.length; i++){
+      for (int j = 0; j < nums[i].length; j++){
+        if (nums[i][j] == 0){
+          count++;
+        }
+      }
+    }
+    return count;
   }
 
   //2. Calculate the sum of a 2d array
