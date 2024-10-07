@@ -6,15 +6,21 @@ public class ArrayDemo{
     int[] test2 = new int[]{};
     int[] test3 = new int[]{2};
 
+    System.out.println("arrToString");
     String test1_result = Arrays.toString(test1);
     String test2_result = Arrays.toString(test2);
     String test3_result = Arrays.toString(test3);
 
-
-    System.out.println("arrToString");
     System.out.println("Array method: " + test1_result + " My method: " + arrToString(new int[]{1, 2, 4}));
     System.out.println("Array method: " + test2_result + " My method: " + arrToString(new int[]{}));
     System.out.println("Array method: " + test3_result + " My method: " + arrToString(new int[]{2}));
+
+    System.out.println("countZero2D");
+    System.out.println("Expected 0, Got: " + countZeros2D(new int[][]{{1, 2, 3}}));
+    System.out.println("Expected 0, Got: " + countZeros2D(new int[][]{}));
+    System.out.println("Expected 0, Got: " + countZeros2D(new int[][]{{}, {}}));
+    System.out.println("Expected 2, Got: " + countZeros2D(new int[][]{{1, 0, 10}, {0, 1, 2}, {8, 7, 9}}));
+    System.out.println("Expected 3, Got: " + countZeros2D(new int[][]{{0, 1, 2}, {3, 0}, {3, 4, 5, 0}}));
 
   }
 
