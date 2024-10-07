@@ -87,27 +87,27 @@ public class ArrayMethods{
   }
   
 
-  public static String arrToString(int[] nums){
+  public static String arrToString(int[] ary){
     String result = "[";
-    for(int i = 0; i < nums.length; i++){
-      if(i == nums.length-1){
-        result += nums[i];
+    for(int i = 0; i < ary.length; i++){
+      if(i == ary.length-1){
+        result += ary[i];
       }
       else{
-      result += nums[i] + ", ";
+      result += ary[i] + ", ";
       }
     }
     return result + "]";
   }
 
-  public static String arrToString(int[][] nums){
+  public static String arrToString(int[][] ary){
     String result = "[";
-    for (int i = 0; i < nums.length; i++){
-        if (i == nums.length-1){
-          result += arrToString(nums[i]);
+    for (int i = 0; i < ary.length; i++){
+        if (i == ary.length-1){
+          result += arrToString(ary[i]);
         }
         else{
-          result += arrToString(nums[i]) + ", ";
+          result += arrToString(ary[i]) + ", ";
         }
     }
     return result + "]";
