@@ -80,7 +80,7 @@ public class ArrayDemo{
     System.out.println("Expected: [[1, 2, 3]] Got: " + arrToString(swapRC(new int[][]{{1},{2},{3}})));
     System.out.println("Expected: [[1], [2], [3]] Got: " + arrToString(swapRC(new int[][]{{1, 2, 3}})));
 
-    System.out.println("swapRC");
+    System.out.println("htmlTable");
     System.out.println("Expected: <table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table> Got: " + htmlTable(new int[][]{{1,2},{3}}));
     System.out.println("Expected: <table><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr><tr><td>1</td><td>5</td></tr></table> Got: " + htmlTable(new int[][]{{1,2}, {3, 4}, {1, 5}}));
     System.out.println("Expected: <table><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr></table> Got: " + htmlTable(new int[][]{{1,2},{3, 4}}));
