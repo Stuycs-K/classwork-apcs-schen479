@@ -5,7 +5,6 @@ public class ArrayDemo{
     int[] test1 = new int[]{1, 2, 4};
     int[] test2 = new int[]{};
     int[] test3 = new int[]{2};
-    int[][] test4 = {{}};
     int[][] test5 = {{4, 5, -6}, {7, -8, -9}};
     int[][] test6 = {{-4, 5, -2}, {7, -5, -1}, {8, 9, -10}};
     int[][] test7 = {{-4, 5}, {7}, {8, 9, -10}}; 
@@ -38,15 +37,15 @@ public class ArrayDemo{
     System.out.println("Expected: 45 Got: " + arr2DSum(new int[][]{{1,2,3},{4,5,6},{7,8,9}}));   
 
     System.out.println("replaceNegative");
-    System.out.println("Test 4 Before: " + arrToString(test4));
-    replaceNegative(test4);
-    System.out.println("Test 4 After: " + arrToString(test4));
     System.out.println("Test 5 Before: " + arrToString(test5));
     replaceNegative(test5);
     System.out.println("Test 5 After: " + arrToString(test5));
     System.out.println("Test 6 Before: " + arrToString(test6));
     replaceNegative(test6);
     System.out.println("Test 6 After: " + arrToString(test6));
+    System.out.println("Test 7 Before: " + arrToString(test7));
+    replaceNegative(test7);
+    System.out.println("Test 7 After: " + arrToString(test7));
 
     System.out.println("copy");
     int[][] test5_result = copy(test5);
@@ -74,7 +73,6 @@ public class ArrayDemo{
     System.out.println("Original Values: " + arrToString(test10) + " Copied Values: " + arrToString(test10_result));
 
     System.out.println("swapRC");
-
     System.out.println("Expected: [[1, 4, 6], [2, 5, 7]] Got: " + arrToString(swapRC(new int[][]{{1,2},{4,5},{6,7}})));
     System.out.println("Expected: [[1, 4], [2, 5], [6, 7]] Got: " + arrToString(swapRC(new int[][]{{1,2,6},{4,5,7}})));
     System.out.println("Expected: [[1, 4, 7], [2, 5, 8], [3, 6, 9]] Got: " + arrToString(swapRC(new int[][]{{1,2,3},{4,5,6},{7,8,9}})));
@@ -82,6 +80,10 @@ public class ArrayDemo{
     System.out.println("Expected: [[1, 2, 3]] Got: " + arrToString(swapRC(new int[][]{{1},{2},{3}})));
     System.out.println("Expected: [[1], [2], [3]] Got: " + arrToString(swapRC(new int[][]{{1, 2, 3}})));
 
+    System.out.println("swapRC");
+    System.out.println("Expected: <table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table> Got: " + htmlTable(new int[][]{{1,2},{3}}));
+    System.out.println("Expected: <table><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr><tr><td>1</td><td>5</td></tr></table> Got: " + htmlTable(new int[][]{{1,2}, {3, 4}, {1, 5}}));
+    System.out.println("Expected: <table><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr></table> Got: " + htmlTable(new int[][]{{1,2},{3, 4}}));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
