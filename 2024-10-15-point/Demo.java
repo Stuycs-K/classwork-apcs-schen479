@@ -16,6 +16,9 @@ public class Demo{
     Point p5 = new Point(20,21); //pyth triple 20-21-29
     Point p6 = new Point(5,12);  //pyth triple 5-12-13
 
+    Point eq2 = new Point(1,0);
+    Point eq3 = new Point(0.5, Math.sqrt(3)/2);
+
     Point origin = new Point(0,0);
 
 
@@ -33,5 +36,9 @@ public class Demo{
     System.out.println( distance(origin,p6));
     System.out.println( Point.distance(origin, p6));
     System.out.println( origin.distanceTo(p6));
+
+    System.out.println(distance(origin, eq2));
+    System.out.println(distance(origin, eq3));
+    System.out.println(distance(eq3, eq2));
   }
 }
