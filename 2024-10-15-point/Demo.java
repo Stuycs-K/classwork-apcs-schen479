@@ -23,6 +23,9 @@ public class Demo{
 
     //test cases
     System.out.println("Expected 2.828... Got: " + distance(p1, p2));
+    System.out.println("Expected 6.40 ... Got: " + distance(p2, p3));
+    System.out.println("Expected 0 Got: " +distance(p3, p4));
+    System.out.println("Expected 5 Got: " +distance(origin, p4));
 
     System.out.println(p3);
     System.out.println("Expected (3, 4) Got: " +p4);
