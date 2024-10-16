@@ -21,24 +21,25 @@ public class Demo{
 
     Point origin = new Point(0,0);
 
+    //test cases
+    System.out.println("Expected 2.828... Got: " + distance(p1, p2));
 
-    System.out.println(distance(p1, p2));
     System.out.println(p3);
-    System.out.println(p4);
-    System.out.println( distance(p1,p2));
-    System.out.println( Point.distance(p1,p2));
-    System.out.println( p1.distanceTo(p2));
+    System.out.println("Expected (3, 4) Got: " +p4);
+    System.out.println("Expected 2.828... Got: " + distance(p1,p2));
+    System.out.println("Expected 2.828... Got: " + Point.distance(p1,p2));
+    System.out.println("Expected 2.828... Got: " + p1.distanceTo(p2));
 
-    System.out.println( distance(origin,p5));
-    System.out.println( Point.distance(origin, p5));
-    System.out.println( origin.distanceTo(p5));
+    System.out.println("Expected 29 Got: " + distance(origin,p5));
+    System.out.println("Expected 29 Got: " + Point.distance(origin, p5));
+    System.out.println("Expected 29 Got: " + origin.distanceTo(p5));
 
-    System.out.println( distance(origin,p6));
-    System.out.println( Point.distance(origin, p6));
-    System.out.println( origin.distanceTo(p6));
+    System.out.println("Expected 13 Got: " + distance(origin,p6));
+    System.out.println("Expected 13 Got: " + Point.distance(origin, p6));
+    System.out.println("Expected 13 Got: " + origin.distanceTo(p6));
 
-    System.out.println(distance(origin, eq2));
-    System.out.println(distance(origin, eq3));
-    System.out.println(distance(eq3, eq2));
+    System.out.println("Expected 1 Got: " + distance(origin, eq2));
+    System.out.println("Expected 1 Got: " + distance(origin, eq3));
+    System.out.println("Expected 1 Got: " + distance(eq3, eq2));
   }
 }
