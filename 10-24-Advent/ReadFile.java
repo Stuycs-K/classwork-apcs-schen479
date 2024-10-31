@@ -10,10 +10,17 @@ public class ReadFile {
       File file = new File("ReadFile.java");//1
       Scanner sc = new Scanner(file);
       //CODE THAT SCANS THE FILE.
+      int index = 0;
       while(sc.hasNextLine()) {
-        if(sc.next().equals("{")) {
-        System.out.println("aaa");
-      }
+        String sentence = sc.nextLine();
+        // if (sentence.indexOf("{") != -1){
+        //   System.out.println(sentence);
+        // }
+
+        if(index % 2 == 0){
+          System.out.println(sentence);
+        } 
+        index++;
       }
       sc.close();//releases the file from your program
 
