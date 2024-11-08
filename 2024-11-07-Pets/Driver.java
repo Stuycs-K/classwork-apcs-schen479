@@ -1,9 +1,9 @@
 //The bird.java getName method overrides the animal.java
 //getName method, returning "The Mighty " + name
-//instead of just the name.
+//instead of just the name. This changes speak() as well as it calls the overridden getName.
 //The only one that did not work was the Bird b2.
-//This one didn't work because a Bird requires more arguments than an Animal.
-//This matches the is-A expectation as Bird is a subclass, and so you can't store Bird in an animal type
+//This one didn't work because a Bird is a type of Animal.
+//This matches the is-A expectation as Bird is a subclass, and so you can't store Animal (the parent class) in an Bird type (child class), only vice versa.
 
 /*
     Design a main class called Driver.java
