@@ -1,45 +1,56 @@
 import java.util.ArrayList;
 public class ArrayListPractice{
   public static void main(String[] args){
+    ArrayList<String> arr0 = createRandomArray(0);
     ArrayList<String> arr1 = createRandomArray(2);
-    ArrayList<String> arr2 = createRandomArray(2);
+    ArrayList<String> arr2 = createRandomArray(3);
     ArrayList<String> arr3 = createRandomArray(10);
     ArrayList<String> arr4 = createRandomArray(7);
 
     System.out.println("createRandomArray");
+    System.out.println(arr0);
     System.out.println(arr1);
     System.out.println(arr2);
     System.out.println(arr3);
     System.out.println(arr4);
 
+    replaceEmpty(arr0);
     replaceEmpty(arr1);
     replaceEmpty(arr2);
     replaceEmpty(arr3);
     replaceEmpty(arr4);
 
     System.out.println("replaceEmpty");
+    System.out.println(arr0);
     System.out.println(arr1);
     System.out.println(arr2);
     System.out.println(arr3);
     System.out.println(arr4);
 
+    ArrayList<String> rarr0 = makeReversedList(arr0);
     ArrayList<String> rarr1 = makeReversedList(arr1);
     ArrayList<String> rarr2 = makeReversedList(arr2);
     ArrayList<String> rarr3 = makeReversedList(arr3);
     ArrayList<String> rarr4 = makeReversedList(arr4);
 
     System.out.println("makeReversedList");
+    System.out.println(rarr0);
     System.out.println(rarr1);
     System.out.println(rarr2);
     System.out.println(rarr3);
     System.out.println(rarr4);
 
+    ArrayList<String> comb0 = mixLists(arr0, arr1);
     ArrayList<String> comb1 = mixLists(arr1, arr2);
-    ArrayList<String> comb2 = mixLists(arr3, arr4);
+    ArrayList<String> comb2 = mixLists(arr2, arr3);
+    ArrayList<String> comb3 = mixLists(arr3, arr4);
 
     System.out.println("mixLists");
+    System.out.println(comb0);
     System.out.println(comb1);
     System.out.println(comb2);
+    System.out.println(comb3);
+
   }
 
   public static ArrayList<String>createRandomArray(int size){
@@ -78,19 +89,12 @@ public static ArrayList<String> makeReversedList( ArrayList<String> original){
 
   public static ArrayList<String> mixLists( ArrayList<String> a,  ArrayList<String> b){
     ArrayList<String> combined = new ArrayList<String>(a.size() + b.size());
-    int i;
-    for(i = 0; i < Math.min(a.size(), b.size()); i++){
-      combined.add(a.get(i));
-      combined.add(b.get(i));
-    }
-    if (i == a.size()-1 || i == 0){
-      for(int j = i; j < b.size(); j++){
-        combined.add(b.get(j));
-    }
-    }
-    else {
-      for (int j = i; j < a.size(); j++){
-        combined.add(a.get(j));
+    for(int i = 0; i < Math.max(a.size(), b.size()); i++){
+      if (i < a.size()){
+        combined.add(a.get(i));
+      }
+      if (i < b.size()){
+        combined.add(b.get(i));
       }
     }
     return combined;
