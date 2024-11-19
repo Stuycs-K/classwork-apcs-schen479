@@ -9,35 +9,34 @@ public class Advent{
       Scanner scan = new Scanner(file);
 
       int curr_direction = 0;
-      //0 - N, 1 - E, 2 - S, 3 - W
       int x = 0;
       int y = 0;
-      while (scan.hasNext()){
-        System.out.println("Hi");
-        String move = scan.next();
-        char direction = move.charAt(0);
-        int amount = Integer.parseInt(move.substring(1));
 
+      String input = scan.nextLine();
+      scan.close();
+      String[] moves = input.split(",");
+
+      for (int i = 0; i < moves.length; i++){
+        char direction = moves[i].charAt(0);
+        int distance = Integer.parseInt(moves[i].substring(1));
         if(direction == 'L'){
-          System.out.println(curr_direction);
           curr_direction = (curr_direction + 1) % 4;
         }
         else if (direction == 'R'){
-          System.out.println(curr_direction);
           curr_direction = (curr_direction + 3) % 4;
         }
 
         if (curr_direction == 0){
-          y += amount;
+          y += distance;
         }
         else if(curr_direction == 2){
-          y -= amount;
+          y -= distance;
         }
         else if(curr_direction == 1){
-          x += amount;
+          x += distance;
         }
         else{
-          x -= amount;
+          x -= distance;
         }
       }
       System.out.println(Math.abs(x)+Math.abs(y));
