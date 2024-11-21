@@ -12,7 +12,7 @@ public class AdventDay6{
         while(scan.hasNextLine() ){
             input.add(scan.nextLine());
         }
-        for(int i = 0; i < input.get(0).size(); i++){
+        for(int i = 0; i < input.get(0).length(); i++){
           String column = "";
           for(int j = 0; j < input.size(); j++){
             column += input.get(j).charAt(i);
@@ -32,19 +32,25 @@ public class AdventDay6{
       int[] copy = new int[26];
 
       for(int i = 0; i < 26; i++){
-          characters[i] = (char) ('a' + i);
+        characters[i] = (char) ('a' + i);
       }
 
       for(int i = 0; i < input.length; i++){
-          if (Character.isLetter(input[i])){
-              occurrences[input[i] - 'a']++;
-              copy[input[i] - 'a']++;
-          }
+        occurrences[input[i] - 'a']++;
+        copy[input[i] - 'a']++;
       }
 
       Arrays.sort(copy);
 
-      return characters[occurrences.indexOf(copy[0])];
+      int index = -1;
+      for (int i = 0; i < occurrences.length; i++) {
+        if (occurrences[i] == copy[copy.length - 1]) {
+            index = i;
+            break;
+        }
+      }
+
+      return characters[index];
 
   }
 }
