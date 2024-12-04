@@ -33,6 +33,7 @@ public static void main(String[] args) {
   for (int i = 0; i < message.length(); i++) {
       System.out.print(COLORS[index] + message.charAt(i));
       index = (index + 1) % COLORS.length;
+      sleep(200);
   }
 
   System.out.print(RESET);
