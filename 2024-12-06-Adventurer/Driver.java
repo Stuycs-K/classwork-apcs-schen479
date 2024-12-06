@@ -17,8 +17,15 @@ public class Driver{
       System.out.println(archer.getSpecialName());
       System.out.println(archer.getSpecial());
       System.out.println(archer.getSpecialMax());
-
     }
+
+    for(int i = 0; i < archers.size(); i++){
+      Adventurer currArch = archers.get(i);
+      currArch.setName("Legolas " + i);
+      currArch.setHP(currArch.getHP() + 10);
+      currArch.setmaxHP(currArch.getmaxHP() + 10);
+    }
+
 
   }
 }

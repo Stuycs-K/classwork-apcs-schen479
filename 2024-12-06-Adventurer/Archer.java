@@ -5,20 +5,20 @@ public class Archer extends Adventurer{
 
   public Archer(String name){
     super(name);
-    this.specialAmount = 10;
+    this.specialAmount = 20;
     this.specialMax = 20;
   }
 
   public Archer(String name, int hp){
     super(name, hp);
-    this.specialAmount = 10;
+    this.specialAmount = 20;
     this.specialMax = 20;
   }
 
-  public Archer(String name, int hp, int specialAmount, int specialMax){
+  public Archer(String name, int hp, int specialAmount){
     super(name, hp);
     this.specialAmount = specialAmount;
-    this.specialMax = specialMax;
+    this.specialMax = specialAmount;
   }
 
   public String getSpecialName(){
