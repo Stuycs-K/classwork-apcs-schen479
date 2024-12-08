@@ -42,29 +42,45 @@ public class Archer extends Adventurer{
   //hurt or hinder the target adventurer
   public String attack(Adventurer other){
     other.applyDamage(10);
-    return super.getName() + " does 10 damage to " + other.getName();
+    return super.getName() + " did 10 damage to " + other.getName();
   }
 
   //heall or buff the target adventurer
   public String support(Adventurer other){
-    other.setHP(10);
-    return super.getName() + " heals " + other.getName() + " by 10 points";
+    int n = other.getmaxHP() - other.getHP();
+    if(n < 10){
+      other.setHP(other.getHP() + n);
+    } 
+    else{
+      n = 10;
+      other.setHP(other.getHP() + 10);
+
+    }
+    return other.getName() + " healed themselves for " + n + " points";
   }
 
   //heall or buff self
   public String support(){
-    this.setHP(10);
-    return super.getName() + " heals itself by 10 points";
+    int n = this.getmaxHP() - this.getHP();
+    if(n < 10){
+      this.setHP(this.getHP() + n);
+    } 
+    else{
+      n = 10;
+      this.setHP(this.getHP() + 10);
+
+    }
+    return this.getName() + " healed themselves for " + n + " points";
   }
 
   //hurt or hinder the target adventurer, consume some special resource
   public String specialAttack(Adventurer other){
-    if (this.specialAmount < 10){
+    if (this.specialAmount < 5){
       this.restoreSpecial(10);
-      this.setSpecial(-5);
     }
+    this.setSpecial(-5);
     other.applyDamage(15);
-    return super.getName() + " used 5 mana to deal 5 extra points of damage to " + other.getName();
+    return this.getName() + " used 5 mana to deal 5 extra points of damage to " + other.getName();
   }
 
 }
