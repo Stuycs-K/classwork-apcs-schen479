@@ -29,7 +29,7 @@ public class Archer extends Adventurer{
     return this.specialAmount;
   }
   public void setSpecial(int n){
-    this.specialAmount += n;
+    this.specialAmount = n;
   }
   public int getSpecialMax(){
     return this.specialMax;
@@ -41,8 +41,15 @@ public class Archer extends Adventurer{
   */
   //hurt or hinder the target adventurer
   public String attack(Adventurer other){
-    other.applyDamage(10);
-    return super.getName() + " did 10 damage to " + other.getName();
+    int n = other.getHP();
+    if (n < 10){
+      other.applyDamage(n);
+    }
+    else{
+      n = 10;
+      other.applyDamage(10);
+    }
+    return super.getName() + " did " + n + " damage to " + other.getName();
   }
 
   //heall or buff the target adventurer
@@ -78,8 +85,17 @@ public class Archer extends Adventurer{
     if (this.specialAmount < 5){
       this.restoreSpecial(10);
     }
-    this.setSpecial(-5);
-    other.applyDamage(15);
+    this.setSpecial(this.getSpecial() -5);
+
+    int n = other.getHP();
+    if (n < 15){
+      other.applyDamage(n);
+    }
+    else{
+      n = 15;
+      other.applyDamage(15);
+    }
+
     return this.getName() + " used 5 mana to deal 5 extra points of damage to " + other.getName();
   }
 

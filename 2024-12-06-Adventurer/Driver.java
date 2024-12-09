@@ -34,22 +34,28 @@ public class Driver{
     arch1.attack(arch2);
     arch2.attack(arch1);
 
-    System.out.println(arch1.getHP());
-    System.out.println(arch2.getHP());
+    System.out.println("arch1 HP " + arch1.getHP());
+    System.out.println("arch2 HP " + arch2.getHP());
 
     arch1.support(arch2);
     arch2.support(arch1);
 
-    System.out.println(arch1.getHP());
-    System.out.println(arch2.getHP());
+    System.out.println("arch1 HP " + arch1.getHP());
+    System.out.println("arch2 HP " + arch2.getHP());
 
     arch1.specialAttack(arch2);
     arch2.specialAttack(arch1);
 
-    System.out.println(arch1.getHP());
-    System.out.println(arch2.getHP());
-    System.out.println(arch1.getSpecial());
-    System.out.println(arch2.getSpecial());
+    System.out.println("arch1 HP " + arch1.getHP());
+    System.out.println("arch2 HP " + arch2.getHP());
+    System.out.println("arch1 special " +arch1.getSpecial());
+    System.out.println("arch2 special " +arch2.getSpecial());
+
+    arch1.setSpecial(0);
+    System.out.println("arch1 special " +arch1.getSpecial());
+    arch1.specialAttack(arch2);
+    System.out.println("arch2 HP " + arch2.getHP());
+    System.out.println("arch1 special " +arch1.getSpecial());
 
 
   }
