@@ -17,47 +17,41 @@ public class Game{
       String move = scan.nextLine();
 
       if(move.equals("a") || move.equals("attack")){
-        System.out.print(move);
-        player.attack(bot);
+        System.out.println(player.attack(bot));
       }
       else if (move.equals("sp") || move.equals("special")){
-        player.specialAttack(bot);
+        System.out.println(player.specialAttack(bot));
       }
       else if (move.equals("su") || move.equals("support")){
-        player.support();
+        System.out.println(player.support());
       }
       else if (move.equals("quit")){
         System.exit(0);
       }
       else{
-        System.out.println("Invalid input. Try again: ");
+        System.out.println("Invalid input letter. Try again: ");
+        continue;
       }
 
       if(bot.getHP() > 0){
         int botMove = random.nextInt(3);
 
         if (botMove == 0){
-          bot.attack(player);
+          System.out.println(bot.attack(player));
         }
         else if (botMove == 1){
-          bot.specialAttack(player);
+          System.out.println(bot.specialAttack(player));
         }
         else{
-          bot.support();
+          System.out.println(bot.support());
         }
       }
-
     }
-  }
-
-  public boolean isValid(String input){
-    String[] validInputs = {"attack", "a", "special", "sp", "support", "su", "quit"};
-
-    for(int i = 0; i < validInputs.length; i++){
-      if (validInputs[i].equals(input)){
-        return true;
-      }
+    if (player.getHP() < 0){
+      System.out.println("Bot Wins");
     }
-    return false;
+    else {
+      System.out.println("Player Wins");
+    }
   }
 }

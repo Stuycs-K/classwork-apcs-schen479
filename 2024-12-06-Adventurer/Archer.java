@@ -42,12 +42,12 @@ public class Archer extends Adventurer{
   //hurt or hinder the target adventurer
   public String attack(Adventurer other){
     int n = other.getHP();
-    if (n < 10){
+    if (n < 5){
       other.applyDamage(n);
     }
     else{
-      n = 10;
-      other.applyDamage(10);
+      n = 5;
+      other.applyDamage(n);
     }
     return super.getName() + " did " + n + " damage to " + other.getName();
   }
@@ -55,12 +55,12 @@ public class Archer extends Adventurer{
   //heall or buff the target adventurer
   public String support(Adventurer other){
     int n = other.getmaxHP() - other.getHP();
-    if(n < 10){
+    if(n < 5){
       other.setHP(other.getHP() + n);
     } 
     else{
-      n = 10;
-      other.setHP(other.getHP() + 10);
+      n = 5;
+      other.setHP(other.getHP() + n);
 
     }
     return other.getName() + " healed themselves for " + n + " points";
