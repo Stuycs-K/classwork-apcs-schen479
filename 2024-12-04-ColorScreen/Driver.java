@@ -53,8 +53,8 @@ public class Driver{
         Text.color(Text.BRIGHT, Text.BLUE);
         System.out.print("WELCOME!");
 
-        Text.go(31, 1);
+        Text.go(32, 1);
         System.out.print(Text.RESET);
     }
-    
+
 }
